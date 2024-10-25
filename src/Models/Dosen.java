@@ -5,11 +5,11 @@ import java.util.ArrayList;
 
 public class Dosen extends Staff {
     private String departemen;
-    private ArrayList<MataKuliah> listMataKuliah = new ArrayList<>();
-
-    public Dosen(String departemen, ArrayList<MataKuliah> listMataKuliah, String nama, String alamat, Date tTL,
-            String telepon, String NIK, double gaji) {
-        super(nama, alamat, tTL, telepon, NIK, gaji);
+    private ArrayList<MatkulAmbil> listMataKuliah = new ArrayList<>();
+        
+    public Dosen(String nama, String alamat, Date tTL, String telepon, String nIK, double gaji, String departemen,
+            ArrayList<MatkulAmbil> listMataKuliah) {
+        super(nama, alamat, tTL, telepon, nIK, gaji);
         this.departemen = departemen;
         this.listMataKuliah = listMataKuliah;
     }
@@ -22,12 +22,21 @@ public class Dosen extends Staff {
         this.departemen = departemen;
     }
 
-    public ArrayList<MataKuliah> getListMataKuliah() {
+    public ArrayList<MatkulAmbil> getListMataKuliah() {
         return listMataKuliah;
     }
 
-    public void setListMataKuliah(ArrayList<MataKuliah> listMataKuliah) {
+    public void setListMataKuliah(ArrayList<MatkulAmbil> listMataKuliah) {
         this.listMataKuliah = listMataKuliah;
     }
 
+    @Override
+    public String toString() {
+        return "Dosen [departemen=" + departemen + ", listMataKuliah=" + listMataKuliah + ", getNIK()=" + getNIK()
+                + ", getNama()=" + getNama() + ", getGaji()=" + getGaji() + ", getAlamat()=" + getAlamat()
+                + ", getDepartemen()=" + getDepartemen() + ", getTTL()=" + getTTL() + ", getListMataKuliah()="
+                + getListMataKuliah() + ", getTelepon()=" + getTelepon() + "]";
+    }
+
+    
 }

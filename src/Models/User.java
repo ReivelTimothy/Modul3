@@ -15,7 +15,6 @@ abstract public class User {
         this.telepon = telepon;
     }
 
-
     public String getNama() {
         return nama;
     }
@@ -46,5 +45,13 @@ abstract public class User {
 
     public void setTelepon(String telepon) {
         this.telepon = telepon;
-    }  
+    }
+
+    @Override
+    public String toString() {
+        return "User [nama=" + nama + ", alamat=" + alamat + ", TTL=" + TTL + ", telepon=" + telepon + ", getNama()="
+                + getNama() + ", getAlamat()=" + getAlamat() + ", getTTL()=" + getTTL() + ", getTelepon()="
+                + getTelepon() + "]";
+    }
+
 }

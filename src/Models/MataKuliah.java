@@ -1,11 +1,13 @@
 package Models;
+public class MataKuliah {
 
-abstract public class MataKuliah {
-    private final String kode, sks, nama;
+    private String kode;
+    private int SKS;
+    private String nama;
 
-    public MataKuliah(String kode, String sks, String nama) {
+    public MataKuliah(String kode, int SKS, String nama) {
         this.kode = kode;
-        this.sks = sks;
+        this.SKS = SKS;
         this.nama = nama;
     }
 
@@ -13,12 +15,32 @@ abstract public class MataKuliah {
         return kode;
     }
 
-    public String getSks() {
-        return sks;
+    public void setKode(String kode) {
+        this.kode = kode;
+    }
+
+    public int getSKS() {
+        return SKS;
+    }
+
+    public void setSKS(int SKS) {
+        this.SKS = SKS;
     }
 
     public String getNama() {
         return nama;
     }
 
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    @Override
+    public String toString() {
+        return "MataKuliah [kode=" + kode + ", SKS=" + SKS + ", nama=" + nama + ", getKode()=" + getKode()
+                + ", getSKS()=" + getSKS() + ", getNama()=" + getNama() + "]";
+    }
+
+    
+    
 }
